@@ -3,27 +3,79 @@
 interface Profile {
     name : string;
     age:number;
-    email:string
+    
 }
 
-const updateProfile =(value:Profile,n:Partial<Profile>) :number =>{
-   n.age = 26
-   return n.age
+const getProperty =<Y extends keyof Profile>(obj:Profile,key:Y):Profile[Y] =>{
+    return obj[key]
 }
 
-// Sample Input :
-const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
-console.log(updateProfile(myProfile, { age: 26 }));
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// Sample Input:
+const person = { name: "Alice", age: 30 };
+console.log(getProperty(person, "name"));
 
 // Sample Output:
-// {
-//   name: "Alice",
-//   age: 26,
-//   email: "alice@example.com"
-// }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
@@ -76,4 +128,3 @@ console.log(updateProfile(myProfile, { age: 26 }));
 
 
     
-}

@@ -1,11 +1,37 @@
 {
-  
+  type Rectangle ={
+    shape:"rectangle"
+    width:number;
+    height:number
+}
+
+
+type Circle ={
+  shape:"circle"
+  radius:number;
+
+}
+
+type Shape = Rectangle | Circle
 
 
 
+const calculateShapeArea=(p1:Shape): number=>{
 
+  if (p1.shape === "rectangle"){
+    
+      return p1.height* p1.width
+  }
+  else if(p1.shape === "circle"){
+    const p:number = Math.PI * p1.radius*p1.radius
+    const ans:string = p.toFixed(2)
+    const ans1:number = parseFloat(ans)
+   
+    return ans1
+  }
+return 0
 
-
+}
 
 
 
