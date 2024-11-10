@@ -7,8 +7,8 @@
         }
         
         const updateProfile =(value:Profile,n:Partial<Profile>) :number =>{
-           n.age = 26
-           return n.age
+            const updatedProfile: Profile = { ...value, ...n };  
+            return updatedProfile.age;
         }
         
         // Sample Input :
