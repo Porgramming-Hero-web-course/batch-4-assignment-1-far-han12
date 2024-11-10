@@ -7,7 +7,6 @@ let s : number = 0
         s+=n
    
     })
-    console.log(s);
     return s
 }
 
